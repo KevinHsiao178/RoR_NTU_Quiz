@@ -55,10 +55,10 @@
 **Ans: a)class b)instance**
 
 6. attr_accessor 的功能是什麼  
-**Ans: ruby自幫我們寫getter與setter，也就是說可以直接使用`bob.name`與`bob.name = "Bob"`**
+**Ans: Ruby自幫我們寫getter與setter，也就是說可以直接使用`bob.name`與`bob.name = "Bob"`**
 
 7. 請說明 public 和 private method 之間的不同  
 **Ans: public method代表公開的，所有人都看得到；private method則是只有在本身處的class內才看得到，且不能被直接呼叫，只能透過class內的其他instance method呼叫**
 
 8. Ruby 是如何確保一個 module 的 method 會被 include 它的 class 使用到？ (提示：method lookup)  
-**Ans: Include的module會先被找到，因為使用.ancestors會發現它夾在bclass與parent class之間**
+**Ans: Include的module會先被找到，因為使用.ancestors會發現它夾在subclass與parent class之間**
