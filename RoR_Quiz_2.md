@@ -10,7 +10,7 @@
 **Ans:**  
 	`a = 1`**是宣告一個變數a並且指定他的值為1**  
 	`@a = 2`**將instance variable @a設定為2**  
-	`@@a = 5`**將class varible @@a設定為5**  
+	`@@a = 5`**將class variable @@a設定為5**  
 	`user = User.new`**以User為模板建造一個名字叫user的物件**  
 	`user.name`**user物件中name欄位的getting method**  
 	`user.name = "Joe"`**user物件中name欄位的setting method**
@@ -19,14 +19,14 @@
 **Ans: module就像是一個工具箱，可以被class include來使用**
 	```ruby
 	module Knowledge
-		def math
-			puts 'I know math!'
-		end
+	  def math
+		  puts 'I know math!'
+	  end
 	end
 	class Engineer
-		include Knowledge
+	  include Knowledge
 	end
-	#Main code
+	# Main code #
 	bob = Engineer.new
 	bob.math
 	```
@@ -55,10 +55,10 @@
 **Ans: a)class b)instance**
 
 6. attr_accessor 的功能是什麼  
-**Ans: Ruby自幫我們寫getter與setter，也就是說可以直接使用`bob.name`與`bob.name = "Bob"`**
+**Ans: ruby自動幫我們寫getter與setter，也就是說可以直接使用`bob.name`與`bob.name = "Bob"`**
 
 7. 請說明 public 和 private method 之間的不同  
 **Ans: public method代表公開的，所有人都看得到；private method則是只有在本身處的class內才看得到，且不能被直接呼叫，只能透過class內的其他instance method呼叫**
 
 8. Ruby 是如何確保一個 module 的 method 會被 include 它的 class 使用到？ (提示：method lookup)  
-**Ans: Include的module會先被找到，因為使用.ancestors會發現它夾在subclass與parent class之間**
+**Ans: Include的module會先被找到，因為使用.ancestors會發現它夾在sub class與parent class之間**
