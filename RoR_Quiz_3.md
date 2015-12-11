@@ -2,8 +2,7 @@
 **Ans:  
 `database.yml`在Config內,是紀錄設定Database的地方，分別在開發、測試、推上雲端時  
 `routes.rb`在Config內,設定此Rails專案的路由  
-`Gemifle`在根目錄內，記錄所有此Rails專案會用到的gem，可以紀錄使用那些library，另外當Rails版本異動時，也可以輕易地用bundle install來取得需要的gem
-**
+`Gemifle`在根目錄內，記錄所有此Rails專案會用到的gem，可以紀錄使用那些library，另外當Rails版本異動時，也可以輕易地用bundle install來取得需要的gem**
 
 2. MVC 架構裡的 M, V, 和 C 分別代表什麼？  
 **Ans: Model(分別對應到不同的Table，放商業邏輯的地方), View, Controller(處理前端的request)  
