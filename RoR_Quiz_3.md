@@ -1,4 +1,4 @@
-1. 請解釋 `database.yml`, `routes.rb`, 和 `Gemifle` 分別是什麼？ 他們分別在一個 Rails 專案裡的什麼位置？ 他們為什麼對一個 Rails 專案如此重要？
+1. 請解釋 `database.yml`, `routes.rb`, 和 `Gemifle` 分別是什麼？ 他們分別在一個 Rails 專案裡的什麼位置？ 他們為什麼對一個 Rails 專案如此重要？  
 **Ans:  
 `database.yml`在Config內,是紀錄設定Database的地方，分別在開發、測試、推上雲端時  
 `routes.rb`在Config內,設定此Rails專案的路由  
@@ -13,9 +13,9 @@
 **Ans:Create, Read, Update, Delete**
 
 4. 請問在 routes.rb 裡面加入以下程式碼會產生出哪一些 url？ (提示：在 browser 輸入`http://localhost:3000/rails/info/routes`)
-```ruby
-resources :users
-```
+	```ruby
+	resources :users
+	```
 **Ans:可以對資料庫進行CRUD的動作**
 
 5. 請解釋 model 檔案和 migration 檔案的差別  
