@@ -7,7 +7,7 @@
  - No real understanding
 
 2. 若今天需要為 Project 和 Issue 這兩個 Model 建立一對多的關係，請寫出實作上所需要的 migratiion 和 model 檔案  
-**Ans: **
+**Ans:**
 	```ruby
 	class Project < ActiveRecord::Base
 		has_many :issues
@@ -43,32 +43,32 @@
 		has_many :users, through: :groups_users
 	end
 	
-	class Participation < ActiveRecord::Base
+	class Group_User < ActiveRecord::Base
 		belongs_to :group
 		belongs_to :user
 	end
 	```
-	**User欄位：{id: integer, name: string}
-	Group欄位：{id: integer, name: string}
-	Participation欄位：{id: integer, user_id: integer, group_id: integer}**
+	**User欄位：{id: integer, name: string}  
+	Group欄位：{id: integer, name: string}  
+	Group_User欄位：{id: integer, user_id: integer, group_id: integer}**
 	
 4. 延續第3題，如果需要讓一個叫 "Bob" 的使用者產生一個名字叫做 "Rails is Fun" 的社團，應該如何在 rails console 裡實作出來？  
 **Ans:**
-```ruby
-#在User table內創建一筆資料
-> user = User.new(name: 'Bob')
-> user.save
-#查詢此筆資料的id
-> user = User.where(name: 'Bob')
-#在Group table內創建一筆資料
-> group = Group.new('Fails is Fun')
-> group.save
-#查詢此筆資料的id
-> group = Group.where(name: 'Fails is Fun')
-#在Participation table內創建一筆資料(假設兩個的id都是1)
-> par = Participation.new(user_id: 1, group_id: 1)
-> par.save
-```
+	```ruby
+	#在User table內創建一筆資料
+	> user = User.new(name: 'Bob')
+	> user.save
+	#查詢此筆資料的id
+	> user = User.where(name: 'Bob')
+	#在Group table內創建一筆資料
+	> group = Group.new('Fails is Fun')
+	> group.save
+	#查詢此筆資料的id
+	> group = Group.where(name: 'Fails is Fun')
+	#在Participation table內創建一筆資料(假設兩個的id都是1)
+	> par = Participation.new(user_id: 1, group_id: 1)
+	> par.save
+	```
 
 5. 延續第4題，請寫一段程式碼確保使用者在建立新社團時社團名字不可以是空白，而且不能超過50個字  
 **Ans:**
